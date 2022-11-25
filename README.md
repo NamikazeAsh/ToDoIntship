@@ -14,7 +14,8 @@ https://github-ashcu.herokuapp.com/api/
 https://github-ashcu.herokuapp.com/api/show/(id) 
 
 3) Create a to-do<br>
-https://github-ashcu.herokuapp.com/api/create
+https://github-ashcu.herokuapp.com/api/ <br>
+And then use the POST box to update data in JSON format
 
 4) Update a to-do<br>
 https://github-ashcu.herokuapp.com/api/update/(id)
