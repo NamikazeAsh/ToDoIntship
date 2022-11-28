@@ -16,9 +16,10 @@ from .models import *
 def todo(request):
     
     if request.method == 'GET':
-            
+        
         ts = ToDo.objects.all()
         serializer = ToDoSerializer(ts,many=True)
+        
         return Response(serializer.data)
     
     if request.method == 'POST':
@@ -26,18 +27,20 @@ def todo(request):
         serializer = ToDoSerializer(data = data)
         if serializer.is_valid():
                 
-            tags = data["Tag"]
-            tags = tags.split()
+            # tags = data["Tag"]
+            # print(tags)
+            # tags = tags.split()
             
-            for tag in tags:
+            # for tag in tags:
                 
-                if tags.count(tag) > 1:
-                    print("Repeating tag: ",tag)
-                    return Response({"Repeating tags":tag})
-                    break
+            #     if tags.count(tag) > 1:
+            #         print("Repeating tag: ",tag)
+            #         return Response({"Repeating tags":tag})
+            #         break
                 
-                else:
-                    serializer.save()
+            #     else:
+            
+            serializer.save()
             
             resp = {"Status":"Successfully created"}
             return Response(resp)
