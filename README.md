@@ -1,7 +1,8 @@
 # ToDoIntship
 To - Do list on Django with REST API
 
-![image](https://user-images.githubusercontent.com/84863353/203569053-895cd921-0033-4d00-9393-8e5d19ddb331.png)
+![image](https://user-images.githubusercontent.com/84863353/204256951-077091fd-f160-444c-b1c5-acb0ccc3ff40.png)
+
 
 
 
