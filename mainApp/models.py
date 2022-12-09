@@ -16,7 +16,7 @@ class ToDo(models.Model):
     Title = models.CharField(max_length=100,blank=False)
     Description = models.CharField(max_length=100,blank=True)
     Date = models.DateField(blank=False)
-    Tag = models.ManyToManyField(TagList,default="-")
+    Tag = models.ManyToManyField(TagList,blank = "True")
     StatusChoices = (
     ("OPEN","OPEN"),
     ("WORKING","WORKING"),
