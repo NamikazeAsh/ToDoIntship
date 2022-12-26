@@ -137,4 +137,8 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR,"static")]
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
+<<<<<<< HEAD
 CSRF_TRUSTED_ORIGINS = ['*']
+=======
+CSRF_TRUSTED_ORIGINS = ['https://github-ashcu.herokuapp.com','https://web-production-a952.up.railway.app']
+>>>>>>> ab46f059bd52df25f14b6bdef0fa2441d2294c7a
