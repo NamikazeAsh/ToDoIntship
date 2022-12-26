@@ -11,19 +11,19 @@ class ToDoSerializer(serializers.ModelSerializer):
     
     Tag = TagSerializer(many=True,read_only=True)
     
-    TagID = serializers.PrimaryKeyRelatedField(
-        many=True,write_only = True,queryset = TagList.objects.all()
-    )
+    # TagID = serializers.PrimaryKeyRelatedField(
+    #     many=True,write_only = True,queryset = TagList.objects.all()
+    # )
     
     class Meta:
         model = ToDo
-        fields = ('id','CreatedTimestamp','Title','Description','Date','Tag','TagID','Status')
+        fields = ('id','CreatedTimestamp','Title','Description','Date','Tag','Status')
     
-    def create(self,validated_data):
-        tag = validated_data.pop("TagID",None)
-        todoz = ToDo.objects.create(**validated_data)
-        if tag:
-            todoz.Tag.set(tag)
-        return todoz
+    # def create(self,validated_data):
+    #     tag = validated_data.pop("TagID",None,)
+    #     todoz = ToDo.objects.create(**validated_data)
+    #     if tag:
+    #         todoz.Tag.set(tag)
+    #     return todoz
         
         
